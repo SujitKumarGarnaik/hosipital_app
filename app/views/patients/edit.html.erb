@@ -1,0 +1,30 @@
+<h1>Edit Patient Details</h1>
+
+<%= form_with(model: @patient, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_area :address %>
+  </div>
+  <div class="actions">
+    <%= form.submit 'Update Patient', class: 'button' %>
+  </div>
+<% end %>  
+
+<%= link_to 'Back to Patients', patients_path, class: 'button secondary' %>
+

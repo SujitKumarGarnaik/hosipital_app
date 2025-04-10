@@ -1,0 +1,29 @@
+<h1>Edit Doctor</h1>
+
+<%= form_with(model: @doctor, local: true) do |f| %>
+  <div>
+    <%= f.label :name, "Doctor Name" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :specialization, "Specialization" %>
+    <%= f.text_field :specialization %>
+  </div>
+
+  <div>
+    <%= f.label :address, "Address" %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div>
+    <%= f.label :joining_date, "Joining Date" %>
+    <%= f.date_field :joining_date %>
+  </div>
+
+  <div>
+    <%= f.submit "Update Doctor" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to Doctors List', doctors_path %>

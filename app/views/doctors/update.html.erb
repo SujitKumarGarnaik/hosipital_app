@@ -1,0 +1,29 @@
+<h2>Add a New Doctor</h2>
+
+<%= form_with model: @doctor, url: doctors_path, method: :post do |f| %>
+  <div>
+    <%= f.label :name, "Doctor Name" %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :specialization, "Specialization" %>
+    <%= f.text_field :specialization %>
+  </div>
+
+  <div>
+    <%= f.label :address, "Address" %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div>
+    <%= f.label :joining_date, "Joining Date" %>
+    <%= f.date_field :joining_date %>
+  </div>
+
+  <div>
+    <%= f.submit "Add Doctor" %>
+  </div>
+<% end %>
+
+<a href="<%= root_path %>">Back to Home</a>

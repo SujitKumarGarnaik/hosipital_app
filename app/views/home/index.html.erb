@@ -1,0 +1,36 @@
+<h1>Welcome to the Daycrop Hospital</h1>
+
+<div class="dashboard-container">
+
+  <div class="card">
+    <h2>Doctors (<%= Doctor.count %>)</h2>
+    <% if Doctor.exists? %>
+      <%= link_to 'View All Doctors', doctors_path %>
+    <% else %>
+      <p>No doctors available.</p>
+      <%= link_to 'Add New Doctor', new_doctor_path%>
+    <% end %>
+  </div>
+
+  <div class="card">
+    <h2>Patients (<%= Patient.count %>)</h2>
+    <% if Patient.exists? %>
+      <%= link_to 'View All Patients', patients_path %>
+    <% else %>
+      <p>No patients available.</p>
+      <%= link_to 'Add New Patient', new_patient_path %>
+    <% end %>
+  </div>
+
+  <div class="card">
+    <h2>Appointments (<%= Appointment.count %>)</h2>
+    <% if Appointment.exists? %>
+      <%= link_to 'View All Appointments', appointments_path %>
+    <% else %>
+      <p>No appointments booked.</p>
+      <%= link_to 'Book an Appointment', new_appointment_path %>
+    <% end %>
+  </div>
+
+
+</div>

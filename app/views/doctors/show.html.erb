@@ -1,0 +1,17 @@
+<h1>Doctor Details</h1>
+
+<div class="show-container">
+  <p><strong>Name:</strong> <%= @doctor.name %></p>
+  <p><strong>Specialization:</strong> <%= @doctor.specialization %></p>
+  <p><strong>Address:</strong> <%= @doctor.address %></p>
+  <p><strong>Joining Date:</strong> <%= @doctor.joining_date.strftime('%B %d, %Y') %></p>
+
+  <div class="show-actions">
+    <%= link_to "Edit Doctor", edit_doctor_path(@doctor), class: 'edit-btn' %>
+    <%= link_to "Delete Doctor", doctor_path(@doctor), method: :delete, data: { confirm: "Are you sure?" }, class: 'delete-btn' %>
+  </div>
+</div>
+
+<p>
+  <%= link_to "Back to Doctors List", doctors_path, class: 'back-btn' %>
+</p>
